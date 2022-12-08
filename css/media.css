@@ -1,0 +1,816 @@
+@media only screen and (max-width: 575px) {
+
+/*------- Common CSS Starts -------*/
+
+body.active { overflow: hidden; }
+.container-fluid { padding: 20px 15px; }
+.section-heading > h2 { font-size: 3rem; margin-bottom: 20px; }
+p { font: 1.8rem/1.4 "JosefinSans-Light"; }
+.box-shadow-left > img { box-shadow: 10px 10px 0px 0px #dc9869; }
+.box-shadow-right > img { box-shadow: -10px 10px 0px 0px #dc9869; }
+.read-more-1 { font-size: 1.6rem; padding: 10px 25px 7px; }
+
+/*------- Common CSS Ends -------*/
+
+/*------- Home Page Starts -------*/
+
+  /*------- Logo and Hamburger Menu Section Starts -------*/
+
+.bg-logo-hamburger-menu { display: block; padding: 10px 15px; }
+.header-logo-mob > a { display: inline-block; }
+.header-logo-mob > a > img { height: 50px; }
+.hamburger-menu { display: block; }
+.burger-menu { background-color: #dc9869; cursor: pointer; height: 40px; position: relative; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; -o-transition: 0.5s ease; transition: 0.5s ease; width: 40px; z-index: 11; }
+.burger-menu span { background-color: #ffffff; height: 1px; left: 50%; margin-top: -1px; position: absolute; top: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; -o-transition: 0.5s ease; transition: 0.5s ease; width: 20px; z-index: 11; }
+.burger-menu span::before { background-color: #ffffff; content: ""; display: block; height: 1px; position: absolute; top: -10px; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; -o-transition: 0.5s ease; transition: 0.5s ease; width: 20px; z-index: 11; }
+.burger-menu span::after { background-color: #ffffff; content: ""; display: block; height: 1px; position: absolute; top: 10px; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; -o-transition: 0.5s ease; transition: 0.5s ease; width: 20px; z-index: 11; }
+.burger-menu.active span { background-color: transparent; -webkit-transition: 0.25s ease; -moz-transition: 0.25s ease; -ms-transition: 0.25s ease; -o-transition: 0.25s ease; transition: 0.25s ease; }
+.burger-menu.active span::before { top: 0; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
+.burger-menu.active span::after { top: 0; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
+
+  /*------- Logo and Hamburger Menu Section Ends -------*/
+
+  /*------- Fixed Sidebar Menu Section Starts -------*/
+
+.fixed-mega-menu { display: block; height: 100%; left: 0; perspective: 1000px; position: absolute; top: 0; transform-style: preserve-3d; width: 100%; z-index: 10; }
+.fixed-mega-menu > span:first-child,
+.fixed-mega-menu > span:nth-child(2),
+.fixed-mega-menu > span:nth-child(3),
+.fixed-mega-menu > span:last-of-type {
+  background-color: #dc9869;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: left;
+  -webkit-transform: perspective(1000px) rotateY(90deg);
+  -moz-transform: perspective(1000px) rotateY(90deg);
+  -ms-transform: perspective(1000px) rotateY(90deg);
+  -o-transform: perspective(1000px) rotateY(90deg);
+  transform: perspective(1000px) rotateY(90deg);
+  -webkit-transition: 1s ease 0.5s;
+  -moz-transition: 1s ease 0.5s;
+  -ms-transition: 1s ease 0.5s;
+  -o-transition: 1s ease 0.5s;
+  transition: 1s ease 0.5s;
+  width: 0;
+  z-index: 10;
+}
+.fixed-mega-menu > span:nth-child(2) { left: 25%; }
+.fixed-mega-menu > span:nth-child(3) { left: 50%; }
+.fixed-mega-menu > span:last-of-type { left: 75%; }
+.fixed-mega-menu.active > span { -webkit-transform: perspective(1000px) rotateY(0deg); -moz-transform: perspective(1000px) rotateY(0deg); -ms-transform: perspective(1000px) rotateY(0deg); -o-transform: perspective(1000px) rotateY(0deg); transform: perspective(1000px) rotateY(0deg); -webkit-transition: 1s ease; -moz-transition: 1s ease; -ms-transition: 1s ease; -o-transition: 1s ease; transition: 1s ease; width: 25%; }
+.menu-listing-desktop { left: 50%; opacity: 0; position: fixed; top: 40%; -webkit-transform: translate(-50%,-50%); -moz-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%); -o-transform: translate(-50%,-50%); transform: translate(-50%,-50%); -webkit-transition: 1s ease 0s; -moz-transition: 1s ease 0s; -ms-transition: 1s ease 0s; -o-transition: 1s ease 0s; transition: 1s ease 0s; visibility: hidden; width: 100%; z-index: 10; }
+.menu-listing-desktop.active { opacity: 1; top: 50%; -webkit-transform: 1s ease 1s; -moz-transform: 1s ease 1s; -ms-transform: 1s ease 1s; -o-transform: 1s ease 1s; transform: 1s ease 1s; visibility: visible; }
+.menu-listing-desktop > li { margin-bottom: 30px; overflow: hidden; }
+.menu-listing-desktop > li:last-child { margin-bottom: 0; }
+.menu-listing-desktop > li > a { color: transparent; display: block; font: 4.4rem/1 "Montserrat-Bold"; letter-spacing: 2px; position: relative; text-align: center; -webkit-text-stroke: 0.5px #ffffff; text-transform: uppercase; z-index: 1; }
+.menu-listing-desktop > li > a::after {
+  bottom: 100%;
+  color: #ffffff;
+  content: attr(data-hover);
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: -1;
+}
+.menu-listing-desktop > li.active > a,
+.menu-listing-desktop > li:hover > a {
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+  /*------- Fixed Sidebar Menu Section Ends -------*/
+
+  /*------- Logo and Navbar Menu Section Starts -------*/
+
+.bg-logo-navbar-menu { display: none; }
+
+  /*------- Logo and Navbar Menu Section Ends -------*/
+
+  /*------- Banner Section Starts -------*/
+
+.bg-banner { height: 100vh; }
+.banner-image { height: 100vh; }
+
+  /*------- Banner Section Ends -------*/
+
+  /*------- Information Section Starts -------*/
+
+.bg-information { padding: 20px 15px; }
+.box-information-quote > h2 { font: 3rem/1.5 "DancingScript-Regular"; margin-bottom: 20px; }
+.information-section-heading > h2 { margin-bottom: 20px; }
+
+  /*------- Information Section Ends -------*/
+
+  /*------- About Section Starts -------*/
+
+.about-image > img { margin-bottom: 30px; }
+.about-heading-info { margin-bottom: 0; padding: 0; }
+.about-info > p { margin-bottom: 20px; text-align: justify; }
+.about-info > p:last-child { margin-bottom: 0; }
+
+  /*------- About Section Ends -------*/
+
+  /*------- Services Section Starts -------*/
+
+.services-listing > li { margin-bottom: 20px; }
+.services-listing > li,
+.services-listing > li > a { font-size: 1.8rem; }
+
+  /*------- Services Section Ends -------*/
+
+  /*------- Gallery Section Starts -------*/
+
+.bg-gallery { margin: 20px 0; padding: 20px 15px 0; }
+.bg-gallery::before { clip-path: polygon(0 100%, 100% 75%, 100% 100%, 0 110%); }
+.bg-gallery::after { clip-path: polygon(0 0, 100% 0, 100% 25%, 0 0); }
+.gallery-image > img,
+.gallery-image > img:last-child { margin-bottom: 20px; }
+
+  /*------- Gallery Section Ends -------*/
+
+  /*------- Testimonials Section Starts -------*/
+
+.testimonials-info > h4 { font-size: 2rem; }
+.testimonials-slick-slider .slick-dots { bottom: 0; }
+
+  /*------- Testimonials Section Ends -------*/
+
+  /*------- Get In Touch Section Starts -------*/
+
+.form-get-in-touch-info { margin: 0; }
+.form-get-in-touch-info > h4 { font-size: 2.2rem; line-height: 1.4; }
+.form-get-in-touch-info > h5 { font-size: 1.8rem; margin-bottom: 20px; }
+
+  /*------- Get In Touch Section Ends -------*/
+
+  /*------- Footer Section Starts -------*/
+
+.footer-logo > a > img { width: 100px; }
+.footer-info > p { font-size: 1.8rem; padding-right: 0; }
+.footer-info > p:last-child { margin-bottom: 20px; }
+.footer-heading > h4 { margin-bottom: 20px; }
+.footer-quick-listing > li:last-child { margin-bottom: 20px; }
+.footer-contact-listing > li:last-child { margin-bottom: 0; }
+.footer-quick-listing > li > a,
+.footer-contact-listing > li > a { font-size: 1.8rem; }
+
+  /*------- Footer Section Ends -------*/
+
+  /*------- Copyright Section Starts -------*/
+
+.copyright-info > p { font-size: 1.6rem; line-height: 1.5; }
+
+  /*------- Copyright Section Ends -------*/
+
+/*------- Home Page Ends -------*/
+
+/*------- About Us Page Starts -------*/
+
+  /*------- About Section Starts -------*/
+
+.bg-about-ap { padding: 20px 15px 0; }
+.about-info-ap { margin: 0; }
+.about-info-ap > p:last-child { margin-bottom: 20px; }
+
+  /*------- About Section Ends -------*/
+
+/*------- About Us Page Ends -------*/
+
+/*------- Services Page Starts -------*/
+
+  /*------- Banner Section Starts -------*/
+
+.bg-banner-services { height: 100vh; }
+
+  /*------- Banner Section Ends -------*/
+
+  /*------- Information Section Starts -------*/
+
+.mk-services-sp { margin: 20px 0 0; }
+
+  /*------- Information Section Ends -------*/
+
+  /*------- Services Section Starts -------*/
+
+.bg-wardrobe-services-sp,
+.bg-cs-makeover-services-sp,
+.bg-fashion-brands-sp { margin: 30px 0; padding-bottom: 0; }
+.bg-personal-shopping-styling-services-sp,
+.bg-event-holiday-styling-services-sp { padding-bottom: 0; }
+.bg-wardrobe-services-sp::before,
+.bg-cs-makeover-services-sp::before,
+.bg-fashion-brands-sp::before { clip-path: polygon(0 100%, 100% 75%, 100% 100%, 0 110%); }
+.bg-wardrobe-services-sp::after,
+.bg-cs-makeover-services-sp::after,
+.bg-fashion-brands-sp::after { clip-path: polygon(0 0, 100% 0, 100% 25%, 0 0); }
+.row-services-sp { margin-bottom: 20px; }
+.services-info-sp { padding: 0; }
+.services-info-sp > p { margin-bottom: 20px; }
+.service-image-sp { margin-bottom: 30px; }
+.services-sub-section-heading-sp > h3 { font-size: 2.4rem; }
+.services-listing-sp { margin-bottom: 20px; }
+.services-listing-sp > li { font-size: 1.8rem; margin-bottom: 15px; text-align: justify; }
+.services-e-info-quote-sp { font-size: 3rem; margin-bottom: 30px; }
+.process-heading-info-sp { padding: 20px 0 0 50px; }
+.process-heading-info-sp > h3 { font-size: 2.4rem; }
+.process-listing { margin-top: 0; }
+.process-listing > li,
+.process-listing > li:last-child { padding-bottom: 20px; }
+
+  /*------- Services Section Ends -------*/
+
+/*------- Services Page Ends -------*/
+
+/*------- Contact Us Page Starts -------*/
+
+  /*------- Contact Information Section Starts -------*/
+
+.bg-contact-cp { padding: 20px 15px; }
+.get-in-touch-image > img { margin-bottom: 20px; }
+.contact-info-cp > img { width: 40px; }
+.contact-info-cp > h3 > a { font-size: 2.4rem; }
+
+  /*------- Contact Information Section Ends -------*/
+
+/*------- Contact Us Page Ends -------*/
+
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+/*------- Common CSS Starts -------*/
+
+body.active { overflow: hidden; }
+.container-fluid { padding: 20px 15px; }
+.section-heading > h2 { font-size: 3rem; margin-bottom: 20px; }
+p { font: 1.8rem/1.4 "JosefinSans-Light"; }
+.read-more-1 { font-size: 1.6rem; padding: 10px 25px 7px; }
+
+/*------- Common CSS Ends -------*/
+
+/*------- Home Page Starts -------*/
+
+  /*------- Hamburger Menu Section Starts -------*/
+
+.bg-logo-hamburger-menu { display: block; padding: 10px 15px; }
+.header-logo-mob > a { display: inline-block; }
+.header-logo-mob > a > img { height: 50px; }
+.hamburger-menu { display: block; }
+.burger-menu { background-color: #dc9869; cursor: pointer; height: 50px; position: relative; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; -o-transition: 0.5s ease; transition: 0.5s ease; width: 50px; z-index: 11; }
+.burger-menu span { background-color: #ffffff; height: 1px; left: 50%; margin-top: -1px; position: absolute; top: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; -o-transition: 0.5s ease; transition: 0.5s ease; width: 25px; z-index: 11; }
+.burger-menu span::before { background-color: #ffffff; content: ""; display: block; height: 1px; position: absolute; top: -10px; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; -o-transition: 0.5s ease; transition: 0.5s ease; width: 25px; z-index: 11; }
+.burger-menu span::after { background-color: #ffffff; content: ""; display: block; height: 1px; position: absolute; top: 10px; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; -o-transition: 0.5s ease; transition: 0.5s ease; width: 25px; z-index: 11; }
+.burger-menu.active span { background-color: transparent; -webkit-transition: 0.25s ease; -moz-transition: 0.25s ease; -ms-transition: 0.25s ease; -o-transition: 0.25s ease; transition: 0.25s ease; }
+.burger-menu.active span::before { top: 0; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
+.burger-menu.active span::after { top: 0; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
+
+  /*------- Hamburger Menu Section Ends -------*/
+
+  /*------- Fixed Sidebar Menu Section Starts -------*/
+
+.fixed-mega-menu { display: block; height: 100%; left: 0; perspective: 1000px; position: absolute; top: 0; transform-style: preserve-3d; width: 100%; z-index: 10; }
+.fixed-mega-menu > span:first-child,
+.fixed-mega-menu > span:nth-child(2),
+.fixed-mega-menu > span:nth-child(3),
+.fixed-mega-menu > span:last-of-type {
+  background-color: #dc9869;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: left;
+  -webkit-transform: perspective(1000px) rotateY(90deg);
+  -moz-transform: perspective(1000px) rotateY(90deg);
+  -ms-transform: perspective(1000px) rotateY(90deg);
+  -o-transform: perspective(1000px) rotateY(90deg);
+  transform: perspective(1000px) rotateY(90deg);
+  -webkit-transition: 1s ease 0.5s;
+  -moz-transition: 1s ease 0.5s;
+  -ms-transition: 1s ease 0.5s;
+  -o-transition: 1s ease 0.5s;
+  transition: 1s ease 0.5s;
+  width: 0;
+  z-index: 10;
+}
+.fixed-mega-menu > span:nth-child(2) { left: 25%; }
+.fixed-mega-menu > span:nth-child(3) { left: 50%; }
+.fixed-mega-menu > span:last-of-type { left: 75%; }
+.fixed-mega-menu.active > span { -webkit-transform: perspective(1000px) rotateY(0deg); -moz-transform: perspective(1000px) rotateY(0deg); -ms-transform: perspective(1000px) rotateY(0deg); -o-transform: perspective(1000px) rotateY(0deg); transform: perspective(1000px) rotateY(0deg); -webkit-transition: 1s ease; -moz-transition: 1s ease; -ms-transition: 1s ease; -o-transition: 1s ease; transition: 1s ease; width: 25%; }
+.menu-listing-desktop { left: 50%; opacity: 0; position: fixed; top: 40%; -webkit-transform: translate(-50%,-50%); -moz-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%); -o-transform: translate(-50%,-50%); transform: translate(-50%,-50%); -webkit-transition: 1s ease 0s; -moz-transition: 1s ease 0s; -ms-transition: 1s ease 0s; -o-transition: 1s ease 0s; transition: 1s ease 0s; visibility: hidden; width: 100%; z-index: 10; }
+.menu-listing-desktop.active { opacity: 1; top: 50%; -webkit-transform: 1s ease 1s; -moz-transform: 1s ease 1s; -ms-transform: 1s ease 1s; -o-transform: 1s ease 1s; transform: 1s ease 1s; visibility: visible; }
+.menu-listing-desktop > li { margin-bottom: 30px; overflow: hidden; }
+.menu-listing-desktop > li:last-child { margin-bottom: 0; }
+.menu-listing-desktop > li > a { color: transparent; display: block; font: 5rem/1 "Montserrat-Bold"; letter-spacing: 2px; position: relative; text-align: center; -webkit-text-stroke: 0.5px #ffffff; text-transform: uppercase; z-index: 1; }
+.menu-listing-desktop > li > a::after {
+  bottom: 100%;
+  color: #ffffff;
+  content: attr(data-hover);
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: -1;
+}
+.menu-listing-desktop > li.active > a,
+.menu-listing-desktop > li:hover > a {
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+  /*------- Fixed Sidebar Menu Section Ends -------*/
+
+  /*------- Logo and Navbar Menu Section Starts -------*/
+
+.bg-logo-navbar-menu { display: none; }
+
+  /*------- Logo and Navbar Menu Section Ends -------*/
+
+  /*------- Banner Section Starts -------*/
+
+.bg-banner { height: 100vh; }
+.banner-image { height: 100vh; }
+
+  /*------- Banner Section Ends -------*/
+
+  /*------- Information Section Starts -------*/
+
+.bg-information { padding: 20px 15px; }
+.box-information-quote > h2 { font: 3rem/1.5 "DancingScript-Regular"; margin-bottom: 20px; }
+.information-section-heading > h2 { margin-bottom: 20px; }
+
+  /*------- Information Section Ends -------*/
+
+  /*------- About Section Starts -------*/
+
+.about-image > img { margin-bottom: 30px; }
+.about-heading-info { margin-bottom: 0; padding: 0; }
+.about-info > p { margin-bottom: 20px; text-align: justify; }
+.about-info > p:last-child { margin-bottom: 0; }
+
+  /*------- About Section Ends -------*/
+
+  /*------- Services Section Starts -------*/
+
+.services-listing > li { margin-bottom: 20px; }
+.services-listing > li,
+.services-listing > li > a { font-size: 1.8rem; }
+
+  /*------- Services Section Ends -------*/
+
+  /*------- Gallery Section Starts -------*/
+
+.bg-gallery { margin: 20px 0; padding: 20px 15px 0; }
+.bg-gallery::before { clip-path: polygon(0 100%, 100% 75%, 100% 100%, 0 110%); }
+.bg-gallery::after { clip-path: polygon(0 0, 100% 0, 100% 25%, 0 0); }
+.gallery-image > img,
+.gallery-image > img:last-child { margin-bottom: 20px; }
+
+  /*------- Gallery Section Ends -------*/
+
+  /*------- Testimonials Section Starts -------*/
+
+.testimonials-info > h4 { font-size: 2rem; }
+.testimonials-slick-slider .slick-dots { bottom: 0; }
+
+  /*------- Testimonials Section Ends -------*/
+
+  /*------- Get In Touch Section Starts -------*/
+
+.form-get-in-touch-info { margin: 0; }
+.form-get-in-touch-info > h4 { font-size: 2.2rem; line-height: 1.4; }
+.form-get-in-touch-info > h5 { font-size: 1.8rem; }
+
+  /*------- Get In Touch Section Ends -------*/
+
+  /*------- Footer Section Starts -------*/
+
+.footer-logo > a > img { width: 100px; }
+.footer-info > p { font-size: 1.8rem; padding-right: 0; }
+.footer-info > p:last-child { margin-bottom: 20px; }
+.footer-heading > h4 { margin-bottom: 20px; }
+.footer-quick-listing > li:last-child { margin-bottom: 20px; }
+.footer-contact-listing > li:last-child { margin-bottom: 0; }
+.footer-quick-listing > li > a,
+.footer-contact-listing > li > a { font-size: 1.8rem; }
+
+  /*------- Footer Section Ends -------*/
+
+  /*------- Copyright Section Starts -------*/
+
+.copyright-info > p { font-size: 1.6rem; line-height: 1.5; }
+
+  /*------- Copyright Section Ends -------*/
+
+/*------- Home Page Ends -------*/
+
+/*------- About Us Page Starts -------*/
+
+  /*------- About Section Starts -------*/
+
+.bg-about-ap { padding: 20px 15px 0; }
+.about-info-ap { margin: 0; }
+.about-info-ap > p:last-child { margin-bottom: 20px; }
+
+  /*------- About Section Ends -------*/
+
+/*------- About Us Page Ends -------*/
+
+/*------- Services Page Starts -------*/
+
+  /*------- Banner Section Starts -------*/
+
+.bg-banner-services { height: 100vh; }
+
+  /*------- Banner Section Ends -------*/
+
+  /*------- Information Section Starts -------*/
+
+.mk-services-sp { margin: 20px 0 0; }
+
+  /*------- Information Section Ends -------*/
+
+  /*------- Services Section Starts -------*/
+
+.bg-wardrobe-services-sp,
+.bg-cs-makeover-services-sp,
+.bg-fashion-brands-sp { margin: 30px 0; padding-bottom: 0; }
+.bg-personal-shopping-styling-services-sp,
+.bg-event-holiday-styling-services-sp { padding-bottom: 0; }
+.bg-wardrobe-services-sp::before,
+.bg-cs-makeover-services-sp::before,
+.bg-fashion-brands-sp::before { clip-path: polygon(0 100%, 100% 75%, 100% 100%, 0 110%); }
+.bg-wardrobe-services-sp::after,
+.bg-cs-makeover-services-sp::after,
+.bg-fashion-brands-sp::after { clip-path: polygon(0 0, 100% 0, 100% 25%, 0 0); }
+.row-services-sp { margin-bottom: 20px; }
+.services-info-sp { padding: 0; }
+.services-info-sp > p { margin-bottom: 20px; }
+.service-image-sp { margin-bottom: 30px; }
+.services-sub-section-heading-sp > h3 { font-size: 2.4rem; }
+.services-listing-sp { margin-bottom: 20px; }
+.services-listing-sp > li { font-size: 1.8rem; margin-bottom: 15px; text-align: justify; }
+.services-e-info-quote-sp { font-size: 3rem; margin-bottom: 30px; }
+.process-heading-info-sp { padding: 20px 0 0 50px; }
+.process-heading-info-sp > h3 { font-size: 2.4rem; }
+.process-listing { margin-top: 0; }
+.process-listing > li,
+.process-listing > li:last-child { padding-bottom: 20px; }
+
+  /*------- Services Section Ends -------*/
+
+/*------- Services Page Ends -------*/
+
+/*------- Contact Us Page Starts -------*/
+
+  /*------- Contact Information Section Starts -------*/
+
+.bg-contact-cp { padding: 20px 15px; }
+.get-in-touch-image > img { margin-bottom: 20px; }
+.contact-info-cp > img { width: 40px; }
+.contact-info-cp > h3 > a { font-size: 2.7rem; }
+
+  /*------- Contact Information Section Ends -------*/
+
+/*------- Contact Us Page Ends -------*/
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+/*------- Common CSS Starts -------*/
+
+.container-fluid { padding: 30px 15px; }
+.d-block-md { display: block; }
+.section-heading > h2 { font-size: 3.6rem; margin-bottom: 30px; }
+p { font: 1.8rem/1.4 "JosefinSans-Light"; }
+
+/*------- Common CSS Ends -------*/
+
+/*------- Home Page Starts -------*/
+
+  /*------- Logo and Navbar Menu Section Starts -------*/
+
+.bg-logo-navbar-menu { padding: 10px 15px; }
+.header-logo > a > img { height: 50px; }
+.header-menu-listing > li { margin-right: 40px; }
+.header-menu-listing > li > a { font-size: 1.6rem; }
+
+  /*------- Logo and Navbar Menu Section Ends -------*/
+
+  /*------- Banner Section Starts -------*/
+
+.bg-banner { height: calc(100vh - 70px); }
+
+  /*------- Banner Section Ends -------*/
+
+  /*------- Information Section Starts -------*/
+
+.bg-information { padding: 30px 15px; }
+.box-information-quote > h2 { font: 3.6rem/1.5 "DancingScript-Regular"; margin-bottom: 20px; }
+.information-section-heading > h2 { margin-bottom: 20px; }
+
+  /*------- Information Section Ends -------*/
+
+  /*------- About Section Starts -------*/
+
+.bg-about { padding: 30px 15px; }
+.about-image > img { margin-bottom: 50px; }
+.about-heading-info { margin-bottom: 0; padding: 0; }
+.about-info > p { margin-bottom: 20px; text-align: justify; }
+.about-info > p:last-child { margin-bottom: 0; }
+
+  /*------- About Section Ends -------*/
+
+  /*------- Services Section Starts -------*/
+
+.services-listing > li { margin-bottom: 20px; }
+.services-listing > li,
+.services-listing > li > a { font-size: 2.2rem; }
+
+  /*------- Services Section Ends -------*/
+
+  /*------- Gallery Section Starts -------*/
+
+.bg-gallery { margin: 20px 0; padding: 20px 15px 0; }
+.bg-gallery::before { clip-path: polygon(0 100%, 100% 25%, 100% 100%, 0 110%); }
+.bg-gallery::after { clip-path: polygon(0 0, 100% 0, 100% 50%, 0 0); }
+.gallery-image > img,
+.gallery-image > img:last-child { margin-bottom: 15px; }
+
+  /*------- Gallery Section Ends -------*/
+
+  /*------- Testimonials Section Starts -------*/
+
+.testimonials-info > h4 { font-size: 2rem; }
+.testimonials-slick-slider .slick-dots { bottom: 0; }
+
+  /*------- Testimonials Section Ends -------*/
+
+  /*------- Get In Touch Section Starts -------*/
+
+.form-get-in-touch-info { margin: 0; }
+.form-get-in-touch-info > h4 { font-size: 2.4rem; line-height: 1.4; }
+.form-get-in-touch-info > h5 { font-size: 1.8rem; }
+
+  /*------- Get In Touch Section Ends -------*/
+
+  /*------- Footer Section Starts -------*/
+
+.footer-logo > a > img { width: 100px; }
+.footer-info > p { font-size: 1.8rem; }
+.footer-heading > h4 { margin-bottom: 20px; }
+.footer-quick-listing > li:last-child { margin-bottom: 20px; }
+.footer-contact-listing > li:last-child { margin-bottom: 0; }
+.footer-quick-listing > li > a,
+.footer-contact-listing > li > a { font-size: 1.8rem; }
+
+  /*------- Footer Section Ends -------*/
+
+  /*------- Copyright Section Starts -------*/
+
+.bg-copyright { padding: 20px 15px; }
+
+  /*------- Copyright Section Ends -------*/
+
+/*------- Home Page Ends -------*/
+
+/*------- About Us Page Starts -------*/
+
+  /*------- About Section Starts -------*/
+
+.bg-about-ap { padding: 30px 15px 0; }
+.about-info-ap { margin: 0; }
+.about-info-ap > p:last-child { margin-bottom: 30px; }
+
+  /*------- About Section Ends -------*/
+
+/*------- About Us Page Ends -------*/
+
+/*------- Services Page Starts -------*/
+
+  /*------- Information Section Starts -------*/
+
+.mk-services-sp { margin: 20px 0 0; }
+
+  /*------- Information Section Ends -------*/
+
+  /*------- Services Section Starts -------*/
+
+.bg-wardrobe-services-sp,
+.bg-cs-makeover-services-sp,
+.bg-fashion-brands-sp { margin: 30px 0; padding-bottom: 0; }
+.bg-personal-shopping-styling-services-sp,
+.bg-event-holiday-styling-services-sp { padding-bottom: 0; }
+.bg-wardrobe-services-sp::before,
+.bg-cs-makeover-services-sp::before,
+.bg-fashion-brands-sp::before { clip-path: polygon(0 100%, 100% 75%, 100% 100%, 0 110%); }
+.bg-wardrobe-services-sp::after,
+.bg-cs-makeover-services-sp::after,
+.bg-fashion-brands-sp::after { clip-path: polygon(0 0, 100% 0, 100% 25%, 0 0); }
+.row-services-sp { margin-bottom: 30px; }
+.services-info-sp { padding: 0; }
+.services-info-sp > p { margin-bottom: 20px; }
+.service-image-sp { margin-bottom: 40px; }
+.services-sub-section-heading-sp > h3 { font-size: 2.7rem; }
+.services-listing-sp { margin-bottom: 20px; }
+.services-listing-sp > li { font-size: 1.8rem; margin-bottom: 15px; text-align: justify; }
+.services-e-info-quote-sp { font-size: 3rem; margin-bottom: 30px; }
+.process-heading-info-sp > h3 { font-size: 2.4rem; }
+.process-listing { margin-top: 0; }
+.process-listing > li,
+.process-listing > li:last-child { padding-bottom: 50px; }
+
+  /*------- Services Section Ends -------*/
+
+/*------- Services Page Ends -------*/
+
+/*------- Contact Us Page Starts -------*/
+
+  /*------- Contact Information Section Starts -------*/
+
+.bg-contact-cp { padding: 30px 15px; }
+.contact-info-cp { margin-right: 30px; }
+.contact-info-cp > h3 > a { font-size: 2.7rem; }
+
+  /*------- Contact Information Section Ends -------*/
+
+/*------- Contact Us Page Ends -------*/
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  
+
+/*------- Common CSS Starts -------*/
+
+.container-fluid { padding: 30px 15px; }
+.d-block-md { display: block; }
+.section-heading > h2 { font-size: 4rem; margin-bottom: 30px; }
+
+/*------- Common CSS Ends -------*/
+
+/*------- Home Page Starts -------*/
+
+  /*------- Logo and Navbar Menu Section Starts -------*/
+
+.bg-logo-navbar-menu { padding: 10px 15px; }
+.header-logo > a > img { height: 50px; }
+
+  /*------- Logo and Navbar Menu Section Ends -------*/
+
+  /*------- Banner Section Starts -------*/
+
+.bg-banner { height: calc(100vh - 70px); }
+
+  /*------- Banner Section Ends -------*/
+
+  /*------- Information Section Starts -------*/
+
+.bg-information { padding: 30px 15px; }
+.box-information-quote > h2 { font: 3.6rem/1.5 "DancingScript-Regular"; margin-bottom: 20px; }
+.information-section-heading > h2 { margin-bottom: 20px; }
+
+  /*------- Information Section Ends -------*/
+
+  /*------- About Section Starts -------*/
+
+.bg-about { padding: 30px 15px; }
+.about-image > img { margin-bottom: 50px; }
+.about-info > p { margin-bottom: 20px; text-align: justify; }
+.about-info > p:last-child { margin-bottom: 0; }
+
+  /*------- About Section Ends -------*/
+
+  /*------- Services Section Starts -------*/
+
+.services-listing > li { margin-bottom: 20px; }
+.services-listing > li,
+.services-listing > li > a { font-size: 2.4rem; }
+
+  /*------- Services Section Ends -------*/
+
+  /*------- Gallery Section Starts -------*/
+
+.bg-gallery { margin: 20px 0; padding: 30px 15px 10px; }
+.bg-gallery::before { clip-path: polygon(0 100%, 100% 25%, 100% 100%, 0 110%); }
+.bg-gallery::after { clip-path: polygon(0 0, 100% 0, 100% 50%, 0 0); }
+.gallery-image > img,
+.gallery-image > img:last-child { margin-bottom: 15px; }
+
+  /*------- Gallery Section Ends -------*/
+
+  /*------- Testimonials Section Starts -------*/
+
+.testimonials-info > h4 { font-size: 2.2rem; }
+.testimonials-slick-slider .slick-dots { bottom: 0; }
+
+  /*------- Testimonials Section Ends -------*/
+
+  /*------- Get In Touch Section Starts -------*/
+
+.form-get-in-touch-info { margin: 0; }
+.form-get-in-touch-info > h4 { font-size: 2.7rem; line-height: 1.4; }
+
+  /*------- Get In Touch Section Ends -------*/
+
+  /*------- Footer Section Starts -------*/
+
+.footer-logo > a > img { width: 100px; }
+.footer-info > p { font-size: 1.8rem; }
+.footer-heading > h4 { margin-bottom: 20px; }
+.footer-quick-listing > li:last-child { margin-bottom: 20px; }
+.footer-contact-listing > li:last-child { margin-bottom: 0; }
+.footer-quick-listing > li > a,
+.footer-contact-listing > li > a { font-size: 1.8rem; }
+
+  /*------- Footer Section Ends -------*/
+
+  /*------- Copyright Section Starts -------*/
+
+.bg-copyright { padding: 20px 15px; }
+
+  /*------- Copyright Section Ends -------*/
+
+/*------- Home Page Ends -------*/
+
+/*------- About Us Page Starts -------*/
+
+  /*------- About Section Starts -------*/
+
+.bg-about-ap { padding: 30px 15px 0; }
+.about-info-ap { margin: 0; }
+.about-info-ap > p:last-child { margin-bottom: 30px; }
+
+  /*------- About Section Ends -------*/
+
+/*------- About Us Page Ends -------*/
+
+/*------- Services Page Starts -------*/
+
+  /*------- Information Section Starts -------*/
+
+.mk-services-sp { margin: 20px 0 0; }
+
+  /*------- Information Section Ends -------*/
+
+  /*------- Services Section Starts -------*/
+
+.bg-wardrobe-services-sp,
+.bg-cs-makeover-services-sp,
+.bg-fashion-brands-sp { margin: 30px 0; padding-bottom: 0; }
+.bg-personal-shopping-styling-services-sp,
+.bg-event-holiday-styling-services-sp { padding-bottom: 0; }
+.bg-wardrobe-services-sp::before,
+.bg-cs-makeover-services-sp::before,
+.bg-fashion-brands-sp::before { clip-path: polygon(0 100%, 100% 75%, 100% 100%, 0 110%); }
+.bg-wardrobe-services-sp::after,
+.bg-cs-makeover-services-sp::after,
+.bg-fashion-brands-sp::after { clip-path: polygon(0 0, 100% 0, 100% 25%, 0 0); }
+.row-services-sp { margin-bottom: 30px; }
+.services-info-sp { padding: 0; }
+.services-info-sp > p { margin-bottom: 20px; }
+.service-image-sp { margin-bottom: 40px; }
+.services-sub-section-heading-sp > h3 { font-size: 2.7rem; }
+.services-listing-sp { margin-bottom: 20px; }
+.services-listing-sp > li { margin-bottom: 15px; text-align: justify; }
+.services-e-info-quote-sp { font-size: 3rem; margin-bottom: 30px; }
+.process-heading-info-sp > h3 { font-size: 2.4rem; }
+.process-listing { margin-top: 0; }
+.process-listing > li,
+.process-listing > li:last-child { padding-bottom: 50px; }
+
+  /*------- Services Section Ends -------*/
+
+/*------- Services Page Ends -------*/
+
+/*------- Contact Us Page Starts -------*/
+
+  /*------- Contact Information Section Starts -------*/
+
+.bg-contact-cp { padding: 30px 15px; }
+.contact-info-cp { margin-right: 30px; }
+.contact-info-cp > h3 > a { font-size: 2.7rem; }
+
+  /*------- Contact Information Section Ends -------*/
+
+/*------- Contact Us Page Ends -------*/
+
+}
